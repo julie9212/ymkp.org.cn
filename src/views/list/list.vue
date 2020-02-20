@@ -10,7 +10,7 @@
                         <p style="color:#2d8cf0;border-bottom:2px solid #2d8cf0">全部</p>
                     </div>
                     <div v-else>
-                        <p @click="routeColumnAll()">全部</p>
+                        <p @click="routeColumnAll()" style="padding-bottom:2px">全部</p>
                     </div>
                 </div>
                 
@@ -19,7 +19,7 @@
                         <p style="color:#2d8cf0;border-bottom:2px solid #2d8cf0">{{info.name}}</p>
                     </div>
                     <div v-else>
-                        <p @click="routeColumn(info.template,info.pid,info.id)">{{info.name}}</p>
+                        <p @click="routeColumn(info.template,info.pid,info.id)" style="padding-bottom:2px">{{info.name}}</p>
                     </div>
                 </div>
             </Col>
