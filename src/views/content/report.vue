@@ -74,7 +74,7 @@ export default {
             let res = await this.$api.contentInfo({id});
             if(res){
                 this.info = res.info;
-                this.title = res.info.title + ' | 环球影响力智库';
+                this.title = res.info.title + ' | 中国医美科普网';
                 this.meeting = res.meeting;
                 this.ad2 = res.ad2;
                 this.ad1 = res.ad1;

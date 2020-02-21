@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Carousel autoplay autoplay-speed="5000">
+        <Carousel  autoplay :autoplay-speed="autoplaySpeed">
             <Carousel-item v-for="list in banner">
                 <div class="banner" @click="ContentInfoid(list.id)" style="width:857px;height:460px">
                     <img :src="list.img_url" style="width:100%;height:100%" class="img_animation">
@@ -24,6 +24,7 @@ export default {
     data(){
         return {
             // list:[],
+            autoplaySpeed: 5000,
             item:'第四届美创会在京隆重举办第四届美创会在第四届美创会在京',
             items:'hhhhhhhhhhhhhhhhhxxxxxxxxxxxxx美创会在京隆创会在京',
         }
