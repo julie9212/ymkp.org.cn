@@ -1,7 +1,7 @@
 <template>
     <div class="viewpoint">
         <Row class="model">
-            <Col span="20" class="icon"><h2>研究观点</h2></Col>
+            <Col span="20" class="icon"><h2>医生科普</h2></Col>
             <Col span="4">
                 <router-link to="/list/0/2">
                     <p>更多</p>

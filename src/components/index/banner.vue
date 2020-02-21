@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Carousel >
+        <Carousel autoplay autoplay-speed="5000">
             <Carousel-item v-for="list in banner">
                 <div class="banner" @click="ContentInfoid(list.id)" style="width:857px;height:460px">
                     <img :src="list.img_url" style="width:100%;height:100%" class="img_animation">

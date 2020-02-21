@@ -3,7 +3,7 @@
         <Row class="model">
             <Col span="20" class="icon">
                 <div class="switch">
-                    <h2>报告厅
+                    <h2>医美参考
                         <span style="padding:0 15px">
                             <span @click="names('1')" :class="name1">智库报告</span> |
                             <span @click="names('2')" :class="name2">外部报告</span>

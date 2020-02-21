@@ -18,14 +18,11 @@
                                     <Col span="4">
                                         <router-link to="/search">
                                             <div style="padding:10px 5px 5px;">
-                                                <p style="font:28px/50px '微软雅黑';color:#fff">
-                                                    <!-- <Icon type="ios-search"></Icon> -->
-                                                </p>
+                                                <p style="font:28px/50px '微软雅黑';color:#fff"></p>
                                             </div>
                                         </router-link>
                                     </Col>
                                     <Col span="6">
-                                    <!-- {{userInfo}} -->
                                         <div style="padding:10px 5px 5px;">
                                             <div v-if="userInfo == ''">
                                                 <!-- 登录 -->
@@ -68,56 +65,33 @@
                         </Row>
                     </Col>
                 </Row>
-            <Nav>
-                <Row class="header_bottom">
-                    <Col span="24">
-
-                        <div class="header_main">
-                            <div class="layout-assistant">
-                                <div class="column_nav">
-                                    <div v-if="columnName == 0">
-                                        <p style="color:#2d8cf0;border-bottom:2px solid #2d8cf0">首页</p>
+                <Nav>
+                    <Row class="header_bottom">
+                        <Col span="24">
+                            <div class="header_main">
+                                <div class="layout-assistant">
+                                    <div class="column_nav">
+                                        <div v-if="columnName == 0">
+                                            <p style="color:#2d8cf0;border-bottom:2px solid #2d8cf0">首页</p>
+                                        </div>
+                                        <div v-else>
+                                            <p @click="home()">首页</p>
+                                        </div>
                                     </div>
-                                    <div v-else>
-                                        <p @click="home()">首页</p>
+                                    <div v-for="info in column" class="column_nav">
+                                        <div v-if="columnName == info.id">
+                                            <p style="color:#2d8cf0;border-bottom:2px solid #2d8cf0">{{info.name}}</p>
+                                        </div>
+                                        <div v-else>
+                                            <p @click="routeColumn(info.template,info.pid,info.id)">{{info.name}}</p>
+                                        </div>
                                     </div>
-                                </div>
-                                
-                                <div v-for="info in column" class="column_nav">
-                                    <div v-if="columnName == info.id">
-                                        <p style="color:#2d8cf0;border-bottom:2px solid #2d8cf0">{{info.name}}</p>
-                                    </div>
-                                    <div v-else>
-                                        <p @click="routeColumn(info.template,info.pid,info.id)">{{info.name}}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <!-- <Menu mode="horizontal" :active-name="index" class="header_main">
-                            <div class="layout-assistant" style="padding-top:8px">
-                                <Menu-item name="a"><p @click="home()" style="line-height:28px">智库首页</p></Menu-item>
-                                <div v-for="info in column">
-                                    <Menu-item :name="info.id">
-                                        <p @click="routeColumn(info.template,info.pid,info.id)" style="line-height:28px;">{{info.name}}</p>
-                                    </Menu-item>
                                 </div>
                             </div>
-                        </Menu> -->
-                        <!-- <Menu mode="horizontal" :active-name="index" class="header_main">
-                            <div class="layout-assistant" style="padding-top:8px">
-                                <Menu-item name="a"><p @click="home()" style="line-height:28px">智库首页</p></Menu-item>
-                                <div v-for="info in column">
-                                    <Menu-item :name="info.id">
-                                        <p @click="routeColumn(info.template,info.pid,info.id)" style="line-height:28px;">{{info.name}}</p>
-                                    </Menu-item>
-                                </div>
-                            </div>
-                        </Menu> -->
-                    </Col>
-                </Row>
-            </Nav>
+                        </Col>
+                    </Row>
+                </Nav>
+
             </div>
            
             
