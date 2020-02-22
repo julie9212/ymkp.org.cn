@@ -12,7 +12,7 @@
                             <Col span="18">
                             <Upload
                                 ref="uploadFile"
-                                action="http://mchapi.globalinfluence.cn/admin.php/admin/system/upload"
+                                action="http://api.ymkp.org.cn/admin.php/admin/system/upload"
                                 :format="['jpg','jpeg','png']"
                                 :max-size="80"
                                 :show-upload-list="false"
